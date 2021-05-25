@@ -1,0 +1,1058 @@
+{
+  "info": {
+    "name": "API Adapt-e",
+    "_postman_id": "4caf4483-98e1-4c98-8a8e-4c9353afde40",
+    "description": "Coleção da APi da Adapt-e",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Oauth",
+      "description": "",
+      "item": [
+        {
+          "id": "8de472e0-c88c-4b61-a0ba-c288c7654472",
+          "name": "Logout",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "me/logout"
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "536d7b8b-4c08-446a-9fe8-c24824117ad6"
+            }
+          ]
+        },
+        {
+          "id": "3a8fb1be-3535-4506-9ce3-5efd2d43f621",
+          "name": "Register",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "register"
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "Leilton César",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "email",
+                  "value": "leilton@email.com",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "password",
+                  "value": "12345",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "c_password",
+                  "value": "12345",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "role",
+                  "value": "professor",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "71bf0051-c1dd-4602-a240-c7c22665b583"
+            }
+          ]
+        },
+        {
+          "id": "46c1153c-b94b-4f26-b94c-5026608641f6",
+          "name": "Login",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "login"
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "leilton@email.com",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "password",
+                  "value": "12345",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "6ec8ab03-ac60-4358-9e7d-5ce2e45e7afd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cursos",
+      "description": "",
+      "item": [
+        {
+          "id": "5f541fe0-e85f-4065-8ec9-8619aa5b3e40",
+          "name": "Cria um Curso",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me"
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Curso B\",\r\n  \"code\": \"12345\",\r\n  \"description\": \"lorem ipseum asdasdasdasdas\",\r\n  \"started_at\": \"2021-05-29 12:44:40\",\r\n  \"finished_at\": \"2021-06-29 15:44:40\",\r\n  \"active\": 1\r\n}",
+              "disabled": false
+            },
+            "description": "Cria um curso"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "e630d2e7-c2c5-4287-9711-36ca33d984db"
+            }
+          ]
+        },
+        {
+          "id": "d53fabeb-1a23-4121-be04-94fdff56665c",
+          "name": "Lista todos os Cursos",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "a427f351-ce3a-422d-93bb-87e0aef238ba"
+            }
+          ]
+        },
+        {
+          "id": "b3b2ce09-21bd-4128-a421-204e2237a6dd",
+          "name": "Lista todos os meus Cursos",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "fb000578-85e6-46bc-adaf-ef4a96d59105"
+            }
+          ]
+        },
+        {
+          "id": "95f8bce7-bdea-43ae-a961-879363f86fc3",
+          "name": "Lista todos os Cursos deletados",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/deleted"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "1ff00c83-316e-4138-9f63-e5d75ae1b389"
+            }
+          ]
+        },
+        {
+          "id": "73a42a1d-74c4-4ace-a440-c9232faef99e",
+          "name": "Mostra um Curso",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "e95633f5-7859-4448-ae4f-29a1257a39a6"
+            }
+          ]
+        },
+        {
+          "id": "b83d9248-6626-4b2e-9a9e-19e88fa7bb4b",
+          "name": "Edita um Curso",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1"
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Curso 1 editado 1\",\r\n  \"noasm\": \"asdasdasd\"\r\n}",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "a70f6be3-6a06-41d5-9db5-62e826c48290"
+            }
+          ]
+        },
+        {
+          "id": "a232785e-c483-4902-bc6a-808fda3a825b",
+          "name": "Restaurar Curso",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/restore"
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "666f7ba6-febc-4b21-b372-19b199bd8d03"
+            }
+          ]
+        },
+        {
+          "id": "d65b8ac0-dd1f-40e6-a924-c4b47955b106",
+          "name": "Deletar Curso",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1"
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "87b92c7e-60c8-4570-a93c-db6f45f79df5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modulos",
+      "description": "",
+      "item": [
+        {
+          "id": "1b69de42-804a-492a-91f9-e16436cf7272",
+          "name": "Cria um Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules"
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Modulo Extra 2\",\r\n  \"description\": \"lorem ipseum asdasdasdasdas\"\r\n}",
+              "disabled": false
+            },
+            "description": "Cria um modulo"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "24d5114f-ad52-4fc5-bc27-4ef28d4aadf3"
+            }
+          ]
+        },
+        {
+          "id": "f3908699-87ff-4776-a556-57a2ee7b20de",
+          "name": "Lista todos os Modulos",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/modules"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "cf379399-5a44-4ddd-9d3c-5e83cfc4dc8e"
+            }
+          ]
+        },
+        {
+          "id": "cf0c6382-d945-4da5-b45e-7ea0855fe365",
+          "name": "Lista todos os Modulos do curso",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "45e13db6-a7ea-4441-b3f4-b6e3756de2f5"
+            }
+          ]
+        },
+        {
+          "id": "104a1a3d-2fec-491d-ac73-49939fbacdca",
+          "name": "Lista todos os Modulos deletados",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/deleted"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "8f3e15db-9ceb-4a4b-8401-33a7b7de2459"
+            }
+          ]
+        },
+        {
+          "id": "d3e0b326-6503-4ea2-b7ec-f1a818427832",
+          "name": "Lista um Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "3fcd1b3c-ac4e-4585-ae5f-e6746dacae7b"
+            }
+          ]
+        },
+        {
+          "id": "cb9ac5f1-4d47-4f96-adf8-e6c3b4650fbd",
+          "name": "Edita um Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/2/modules/3"
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Modulo 3 editado\"\r\n}",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "49ccba38-db64-4f22-85b3-d7baac106df4"
+            }
+          ]
+        },
+        {
+          "id": "2dac4c2d-ccf7-4204-b161-863cb61447b9",
+          "name": "Restaurar Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/3/restore"
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "02b33bfd-622f-446d-a43c-f26f0c456366"
+            }
+          ]
+        },
+        {
+          "id": "c036d50b-a79d-4a4f-9c62-a3a17f9369a3",
+          "name": "Deletar Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/3"
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "31e4ec42-6125-4f67-805e-acfd22d7ccfb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Conteudos",
+      "description": "",
+      "item": [
+        {
+          "id": "b18ae4ba-7b88-4e21-9938-df7bfc79448f",
+          "name": "Cria um Conteudo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1/contents"
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"type\": \"video\"\r\n}",
+              "disabled": false
+            },
+            "description": "Cria um Conteudo"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "46edad29-3a81-45d7-afb4-bf80e787c611"
+            }
+          ]
+        },
+        {
+          "id": "dc69a8a8-e5db-4ef5-a8fb-3ac755a9fe97",
+          "name": "Lista todos os Conteudos do Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1/contents"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "ef819f02-925a-4a4f-9b89-c01dac184e3c"
+            }
+          ]
+        },
+        {
+          "id": "a617df83-2c71-4a8f-be41-3e7515a95b31",
+          "name": "Lista todos os Conteudos deletados",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1/contents/deleted"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "d1205c23-e904-4bda-8108-bcde14686a27"
+            }
+          ]
+        },
+        {
+          "id": "60165c52-6c33-4c17-af97-867dbce0cc78",
+          "name": "Lista um Conteudo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1/contents/1"
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "0b3f4ef4-41cc-4668-ae8a-814bd5871c9b"
+            }
+          ]
+        },
+        {
+          "id": "1a873fdc-0683-44cc-bf5e-7a33d6ae6706",
+          "name": "Edita um Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1/contents/1"
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"views\": 0\r\n}",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "23a81316-eca2-4483-82ee-bdb618793b45"
+            }
+          ]
+        },
+        {
+          "id": "f664ef76-be59-4100-9839-f5b5565aa2fa",
+          "name": "Restaurar Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1/contents/1/restore"
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "c301c8d6-772a-416e-840d-06867b366683"
+            }
+          ]
+        },
+        {
+          "id": "076d2d8d-988f-48ed-89f9-fc12309cbaab",
+          "name": "Deletar Modulo",
+          "request": {
+            "url": {
+              "host": "{{Server 1}}",
+              "path": [
+                "courses/me/1/modules/1/contents/1"
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Accept",
+                "value": "*/*",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": "deleta um reembolso (sofdelete)"
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "e85a270b-ac78-487d-90cb-f3d854d44228"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "Server 1",
+      "value": "DefaultParameterValue/api"
+    },
+    {
+      "key": "Server 11",
+      "value": "DefaultParameterValue/api"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "<<token>>",
+      "scope": ""
+    }
+  }
+}
