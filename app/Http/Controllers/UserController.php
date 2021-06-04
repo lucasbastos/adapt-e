@@ -21,6 +21,7 @@ class UserController extends Controller
             $user = Auth::user();
             $success['token'] =  $user->createToken('MyApp')-> accessToken;
             $success['role'] =  $user->role;
+            $success['name'] =  $user->name;
             return response()->json(['success' => $success], $this-> successStatus);
         }
         else{
@@ -38,8 +39,8 @@ class UserController extends Controller
             $token = Auth::user()->token();
             $token->revoke();
             return response()->json(['error'=>'User is logout'], 203);
-        } 
-        else{ 
+        }
+        else{
             return response()->json(['error'=>'Unauthorized'], 401);
         }
     }
@@ -63,6 +64,6 @@ class UserController extends Controller
     {
         $request['password'] = bcrypt($request->input('password'));
         return $request->all();
-        
+
     }
 }

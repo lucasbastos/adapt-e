@@ -57,6 +57,7 @@ class CoursesController extends Controller
         $course->modules;
         return $course;
     }
+    //teste
 
     /**
      * Update the specified resource in storage.
@@ -103,7 +104,7 @@ class CoursesController extends Controller
         $course = Course::onlyTrashed()->where('user_id', Auth::user()->id)->find($id);
         if (!empty($course)) {
             $modules = Module::onlyTrashed()->where('course_id', 1)->get();
-            
+
             foreach ($modules as $key => $module) {
                 $module->restore();
             }
