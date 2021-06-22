@@ -22,6 +22,12 @@ class UserController extends Controller
             $success['token'] =  $user->createToken('MyApp')-> accessToken;
             $success['role'] =  $user->role;
             $success['name'] =  $user->name;
+            $success['location'] =  $user->location;
+            $success['tel'] =  $user->tel;
+            $success['facebook'] =  $user->facebook;
+            $success['twitter'] =  $user->twitter;
+            $success['linkedin'] =  $user->linkedin;
+            $success['about'] =  $user->about;
             return response()->json(['success' => $success], $this-> successStatus);
         }
         else{
@@ -56,6 +62,12 @@ class UserController extends Controller
         $success['token'] =  $user->createToken('MyApp')-> accessToken;
         $success['name'] =  $user->name;
         $success['role'] =  $user->role;
+        $success['location'] =  $user->location;
+        $success['tel'] =  $user->tel;
+        $success['facebook'] =  $user->facebook;
+        $success['twitter'] =  $user->twitter;
+        $success['linkedin'] =  $user->linkedin;
+        $success['about'] =  $user->about;
 
         return response()->json(['success'=>$success], 201);
     }
